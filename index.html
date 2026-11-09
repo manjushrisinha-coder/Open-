@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101510">
+  <meta name="description" content="Discover useful, community-built open-source apps.">
+  <title>OpenShelf — Open-source apps, all in one place</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="OpenShelf home"><span class="brand-mark">o</span><span>open<span class="brand-light">shelf</span></span></a>
+    <nav class="topnav" aria-label="Main navigation">
+      <a href="#discover">Discover</a>
+      <a href="#about">About</a>
+      <a class="github-link" href="https://github.com/manjushrisinha-coder/Open-" target="_blank" rel="noreferrer">Contribute <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> SOFTWARE THAT BELONGS TO EVERYONE</p>
+        <h1 id="hero-title">Good apps.<br><span>Open by nature.</span></h1>
+        <p class="hero-description">A home for thoughtful, open-source software. Explore community favorites, find your next tool, and see exactly where it comes from.</p>
+        <a class="hero-cta" href="#discover">Explore the collection <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-spark spark-one">✳</div><div class="hero-spark spark-two">✦</div>
+        <div class="app-tile tile-main"><span>◈</span></div>
+        <div class="app-tile tile-small tile-a">⌘</div><div class="app-tile tile-small tile-b">◉</div><div class="app-tile tile-small tile-c">✳</div>
+        <div class="hero-caption">A world of tools<br>without the walled garden.</div>
+      </div>
+      <div class="hero-bottom"><span>COMMUNITY POWERED</span><span class="hero-line"></span><span>TRANSPARENT BY DEFAULT</span></div>
+    </section>
+
+    <section class="catalog section-wrap" id="discover" aria-labelledby="catalog-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE OPEN COLLECTION</p><h2 id="catalog-title">Find your next favorite.</h2></div>
+        <p class="result-count" id="result-count" aria-live="polite"></p>
+      </div>
+      <div class="controls">
+        <label class="search-box"><span class="search-icon" aria-hidden="true">⌕</span><span class="sr-only">Search apps</span><input id="search" type="search" placeholder="Search apps, categories, or features…" autocomplete="off"></label>
+        <label class="select-wrap"><span class="sr-only">Filter by category</span><select id="category-filter"><option value="all">All categories</option></select><span aria-hidden="true">⌄</span></label>
+      </div>
+      <div class="category-chips" id="category-chips" aria-label="Filter by category"></div>
+      <div class="app-grid" id="app-grid"></div>
+      <div class="empty-state" id="empty-state" hidden><span>◌</span><h3>No apps found</h3><p>Try a different search or category.</p><button id="clear-filters" class="text-button">Clear filters</button></div>
+    </section>
+
+    <section class="manifesto" id="about">
+      <div class="manifesto-mark" aria-hidden="true">✳</div>
+      <div><p class="eyebrow">A BETTER WAY TO DISCOVER</p><h2>Open source is<br><span>for everyone.</span></h2></div>
+      <p class="manifesto-copy">OpenShelf is a community-built directory for software you can trust, inspect, and make your own. No paywalls. No gatekeepers. Just great projects and the people behind them.</p>
+      <a class="manifesto-link" href="https://github.com/manjushrisinha-coder/Open-" target="_blank" rel="noreferrer">Help us grow the shelf <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">o</span><span>open<span class="brand-light">shelf</span></span></a><p>Made for the curious. Powered by the open-source community.</p><span class="footer-note">© <span id="year"></span> OpenShelf · Free to explore</span></footer>
+
+  <dialog class="app-dialog" id="app-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" id="dialog-close" aria-label="Close details">×</button>
+    <div class="dialog-icon" id="dialog-icon"></div>
+    <p class="eyebrow" id="dialog-category"></p><h2 id="dialog-title"></h2>
+    <p class="dialog-developer" id="dialog-developer"></p><p class="dialog-description" id="dialog-description"></p>
+    <div class="dialog-meta" id="dialog-meta"></div>
+    <a class="source-button" id="dialog-source" href="#" target="_blank" rel="noreferrer">View source code <span aria-hidden="true">↗</span></a>
+    <p class="dialog-note">OpenShelf links to the project's official source. Download and installation instructions are maintained by each project.</p>
+  </dialog>
+</body>
+</html>
